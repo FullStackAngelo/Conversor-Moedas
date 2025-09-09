@@ -35,7 +35,7 @@ body {
     background-repeat: repeat;
     height: 100vh;
     width: 100vw;
-    font-size: 1.6rem;
+    font-size: 1.9rem;
     line-height: 2rem;
     font-weight: 400;
     font-style: normal;
@@ -82,7 +82,7 @@ nav {
 
 .container {
     margin: 50px auto;  
-    width: 70%;
+    width: 80%;
     max-width: 800px;
     height: 450px;
     background-color: #141534;
@@ -113,13 +113,14 @@ nav {
 .content button {
     background-color: #0E0F25;
     border: 1px solid #1F2151;
-    padding: 15px;
+    padding: 25px;
     color: #fff;
     border-radius: 8px;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     transition: 0.3s ease-in-out;
+    font-size: 1.2rem;
 }
 
 .content input:focus, .content select:focus, .content button:focus {
@@ -176,4 +177,22 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .resultado span {
     margin: 10px;
+}
+
+@media (min-width: 0px) {
+    html{
+        font-size: 70%
+    }
+}
+
+@media (min-width: 768px) {
+    html{
+        font-size: 75%
+    }
+}
+
+@media (min-width: 1280px) {
+    html{
+        font-size: 80%
+    }
 }
