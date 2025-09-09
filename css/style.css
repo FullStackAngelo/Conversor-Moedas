@@ -13,6 +13,10 @@ html, body {
     background-position: center;
     background-attachment: fixed; /* ajuda no iOS */
     overscroll-behavior: none; /* evita puxar além do limite */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 html {
@@ -40,10 +44,6 @@ body {
     font-weight: 400;
     font-style: normal;
     color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
 h1 {
@@ -88,7 +88,7 @@ nav {
     margin: 50px auto;  
     width: 80vw;
     max-width: 800px;
-    height: 450px;
+    height: auto;
     background-color: #141534;
     border: #2F34AB 1px solid;
     border-radius: 20px;
@@ -162,13 +162,14 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .resultadoinicio {
-    height: 0%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
     border: 0px solid #2F34AB;
     background-color: #1F2151;
     border-radius: 20px;
     flex-direction: column;
-    text-align: center;
-    justify-content: center;
+
 }
 
 .resultado {
@@ -177,32 +178,33 @@ input[type="number"]::-webkit-outer-spin-button {
     height: 100%;
     transition: 0.3s ease-in ; 
     display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-height: 500px;
 }
 
-.resultado span {
+.resultado p, h2 {
     margin: 10px;
 }
 
-@media (max-width: 445px) {
+#cotacao {
+    display: none;
+}
+
+@media (max-width: 425px) {
     html{
         font-size: 70%
-    }
-    .nav-container {
-        padding-top: 20px;
     }
 
     body {
         display: block;
     }
-   
 }
 
 @media (min-width: 768px) {
     html{
         font-size: 75%
-    }
-    .nav-container {
-        padding-top: 30px;
     }
 }
 

@@ -12,7 +12,6 @@ inputValor.addEventListener('input', function (e) {
 
 const resultado = document.querySelector('.resultado');
 resultado.classList.remove('resultado');
-
 const botao = document.getElementById('btn-converter');
 
 botao.addEventListener('click', function () {
@@ -45,15 +44,18 @@ botao.addEventListener('click', function () {
         valorMoedaEstrangeira = 1;
     }
     let conversao = valor * valorMoedaEstrangeira;
-
+    let cotacaoEquivalente = `1$ = ${valorMoedaEstrangeira}$`
     const conversaoformatada = conversao.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
 
     resultado.classList.add('resultado');
 
     if (isNaN(conversao) || conversao == 0) {
-    document.getElementById('resultadoconversao').innerHTML = `<span class="fonte-mono">Digite um valor valído</span>`;
+    document.getElementById('resultadoconversao').innerHTML = `<h2 class="fonte-mono">Digite um valor valído</h2>`;
     } else {
-        document.getElementById('resultadoconversao').innerHTML = `<span class="fonte-mono">${conversaoformatada}</span>`
+        document.getElementById('cotacao').style.display = 'block';
+        document.getElementById('cotacao').innerHTML = `<h2 class="fonte-mono">${cotacaoEquivalente}</h2>`
+        document.getElementById('resultadoconversao').innerHTML = `<h2 class="fonte-mono">${conversaoformatada}</h2>`
     }
 
    
