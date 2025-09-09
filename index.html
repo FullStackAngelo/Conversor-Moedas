@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Conversor de Moedas</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <img src="/assets/NavTitle.png" alt="convert">
+        </div>
+    </nav>
+    <section>
+        <div class="container">
+            <div class="content-1 content">
+                <label for="valor">Valor</label>
+                <input type="text" placeholder="0.00" id="valor">
+            </div>
+            <div class="content-2 content">
+                <label for="moeda">Moeda</label>
+                <select name="moeda" id="moeda">
+                    <option value="USD">Dólar americano</option>
+                    <option value="EUR">Euro</option>
+                    <option value="GBP">Libra esterlina</option>
+                    <option value="ARS">Peso argentino</option>
+                    <option value="CAD">Dólar canadense</option>
+                    <option value="AUD">Dólar australiano</option>
+                    <option value="JPY">Iene japonês</option>
+                    <option value="CNY">Yuan chinês</option>
+                </select>
+            </div>
+            <div class="content-3 content">
+                <input type="button" value="Converter" id="btn-converter">
+            </div>
+            <section class="resultado resultadoinicio">
+                <!-- Conteúdo do resultado da conversão -->
+                <span id="cotacao"></span>
+                <h2 id="resultadoconversao"></h2>
+            </section>
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
