@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 💱 Conversor de Moedas
 
 Este é um projeto de **conversão de moedas**, desenvolvido como prática de estudos em **HTML, CSS e JavaScript**.  
