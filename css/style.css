@@ -108,8 +108,9 @@ nav {
 
 .content label {
     font-size: 1.2rem;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
     text-align: left; /* garante que fique colado no input */
+    
 }
 
 .content input,
@@ -193,23 +194,51 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 @media (max-width: 425px) {
+    body {
+        display: block;
+        font-size: 1rem;    
+    }
+
+    html{
+        font-size: 75%
+    }
+
+    .nav-container {
+        padding: 15px;
+    }
+}
+
+@media (min-width: 426px) {
     html{
         font-size: 70%
     }
 
-    body {
-        display: block;
-    }
+
+    .content label {
+        font-size: 1.3rem;
+        }
 }
 
 @media (min-width: 768px) {
     html{
         font-size: 75%
     }
+    .content label {
+        font-size: 1.3rem;
+        }
 }
 
 @media (min-width: 1280px) {
     html{
         font-size: 80%
     }
-}
+    
+    .content label {
+        font-size: 1.4rem;
+        }
+    
+    .content  {
+        margin: 40px;
+    }
+    }
+
