@@ -195,7 +195,6 @@ input[type="number"]::-webkit-outer-spin-button {
 
 @media (max-width: 425px) {
     body {
-        display: block;
         font-size: 1rem;    
     }
 
@@ -204,7 +203,11 @@ input[type="number"]::-webkit-outer-spin-button {
     }
 
     .nav-container {
-        padding: 25px;
+        padding-bottom: 25px;
+    }
+
+    .container {
+        margin: 0px
     }
 }
 
