@@ -40,6 +40,10 @@ body {
     font-weight: 400;
     font-style: normal;
     color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 h1 {
@@ -82,7 +86,7 @@ nav {
 
 .container {
     margin: 50px auto;  
-    width: 80%;
+    width: 80vw;
     max-width: 800px;
     height: 450px;
     background-color: #141534;
@@ -179,15 +183,26 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 10px;
 }
 
-@media (min-width: 0px) {
+@media (max-width: 445px) {
     html{
         font-size: 70%
     }
+    .nav-container {
+        padding-top: 20px;
+    }
+
+    body {
+        display: block;
+    }
+   
 }
 
 @media (min-width: 768px) {
     html{
         font-size: 75%
+    }
+    .nav-container {
+        padding-top: 30px;
     }
 }
 
